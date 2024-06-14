@@ -24,6 +24,7 @@ import { Footer } from './Footer'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
+import { PageActions } from './PageActions'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
@@ -278,6 +279,11 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
+        pageFooter={
+          <div style={{ margin: 'auto' }}>
+            <PageActions title={title} />
+          </div>
+        }
         footer={footer}
       />
 
